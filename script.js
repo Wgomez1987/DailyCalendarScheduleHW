@@ -8,7 +8,7 @@ $(function () {
     $('.time-block').each(function () {
       var currentHour = dayjs().hour();
       console.log(currentHour)
-      const blockHour = parseInt(this.id);
+      var blockHour = parseInt(this.id);
       if (blockHour < currentHour) {
         $(this).addClass('past')
       } else if (blockHour === currentHour) {
@@ -39,10 +39,10 @@ $(function () {
   });
 
   function updateTime() {
-    const dateElement = $('#date');
-    const timeElement = $('#time');
-    const currentDate = dayjs().format('dddd, MMMM D, YYYY');
-    const currentTime = dayjs().format('hh:mm:ss A');
+    var dateElement = $('#date');
+    var timeElement = $('#time');
+    var currentDate = dayjs().format('dddd, MMMM D, YYYY');
+    var currentTime = dayjs().format('hh:mm:ss A');
     dateElement.text(currentDate);
     timeElement.text(currentTime);
   }
